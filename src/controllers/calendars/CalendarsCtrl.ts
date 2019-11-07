@@ -1,5 +1,5 @@
 import {
-  Authenticated,
+  // Authenticated,
   BodyParams,
   Controller,
   Delete,
@@ -65,14 +65,14 @@ export class CalendarsCtrl {
    * @returns {{id: string, name: string}}
    */
   @Delete("/")
-  @Authenticated()
+  // @Authenticated()
   @Status(204)
   async remove(@BodyParams("id") @Required() id: string): Promise<void> {
     this.calendarsService.remove(id);
   }
 
   @Get("/")
-  @Authenticated()
+  // @Authenticated()
   async getAllCalendars(): Promise<Calendar[]> {
     return this.calendarsService.query();
   }

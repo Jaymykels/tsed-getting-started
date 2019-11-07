@@ -11,18 +11,18 @@ const rootDir = __dirname;
 @ServerSettings({
   rootDir,
   acceptMimes: ["application/json"],
-  logger: {
-    debug: true,
-    logRequest: true,
-    requestFields: ["reqId", "method", "url", "headers", "query", "params", "duration"]
-  },
+  // logger: {
+  //   debug: true,
+  //   logRequest: true,
+  //   requestFields: ["reqId", "method", "url", "headers", "query", "params", "duration"]
+  // },
   swagger: {
     path: "/api-docs"
   },
   calendar: {
     token: true
   },
-  debug: true
+  debug: false
 })
 export class Server extends ServerLoader {
   /**
